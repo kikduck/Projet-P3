@@ -1,0 +1,336 @@
+/*
+ violet : #9356DC
+ rose : #FF79DA
+ bleu : #99E2D0 ease-in
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+ $title_section: 25;
+ $margin_title_sectionpx: $title_section * 1px;
+
+* {
+    padding: 0; 
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.loader-wrapper {
+    position: fixed;
+    width: 100%;
+    height:100vh;
+    background: rgba(255, 255, 255, 1);
+    top:0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    animation-name: disappear;
+    animation-duration: 2500ms;
+    animation-fill-mode: forwards;
+  }
+
+  .loader {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .loader:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #9b57c0;
+    border-color: #9b57c0 transparent #9b57c0 transparent;
+    animation: loader 1.2s linear infinite;
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes disappear {
+    99% {
+        height:100vh;
+        visibility: visible;
+    }
+    100% {
+        height: 0px;
+        visibility: hidden;
+    }
+  }
+header {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 3px 5px rgb(184, 184, 184);
+    position: sticky;
+    z-index: 20;
+}
+
+#logo {
+    padding-top: 30px;
+    margin: auto;
+    display: block;
+    width: 200px;
+}
+
+.localisation {
+    background-color:rgb(235, 235, 235);
+    width: 100%;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(73, 73, 73);
+}
+
+.localisation span {
+    margin-left: 10px;
+}
+
+.explorer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-overflow: clip;
+    font-family: 'Roboto', sans-serif;
+    padding: 40px;
+    background-color: rgb(247, 247, 247);
+    gap : 20px;
+
+    h2 {
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    span {
+        color: rgb(73, 73, 73);
+        font-size: 17px;
+    }
+}
+
+.explorer-button {
+    background-image: linear-gradient(0deg, #9b57c0, #c053c0, #e268e4, #ff8ade);
+    width: 210px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 4px 7px rgb(184, 184, 184);
+    transition: 0.2s;
+}
+
+.explorer-button:hover {
+    cursor: pointer;
+    opacity: 90%;
+    box-shadow: 0px 4px 7px rgb(150, 150, 150);
+}
+
+.fonctionnement {
+    margin-top: 50px;
+
+    h2 {
+        margin-left: $margin_title_sectionpx;
+    }
+    .box-text {
+        flex-grow: 4;
+        font-weight: bolder;
+    }
+
+    .box-list {
+        flex-grow: 1;
+        position: absolute;
+        margin-left: -12px;
+        color: white;
+        background-color: #9b57c0;
+        width: 25px;
+        height: 25px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.fonctionnement-logo {
+    flex-grow: 1;
+    margin-left: 40px;
+    color: grey;
+}
+
+.fonctionnement-all-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.fonctionnement-box {
+    width: 320px;
+    height: 80px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 35px;
+    box-shadow: 0px 4px 7px rgb(184, 184, 184);
+    display: flex;
+    align-items: center;
+}
+
+.fonce {
+    background-color: rgb(242, 228, 242);
+}
+
+.restaurants {
+    background-color: rgb(247, 247, 247);
+    margin-top: 40px;
+    padding-bottom: 60px;
+
+    h2 {
+        margin-left: $margin_title_sectionpx;
+        padding-top:  40px;
+    }
+}
+
+.restaurants-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .restaurants-one {
+        width: 320px;
+        height: 240px;
+        border-radius: 30px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0px 4px 7px rgb(184, 184, 184);
+
+        .restaurants-img {
+            width: 100%;
+            height: 70%;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .restaurants-desc {
+            display: flex;
+            margin-top: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+            justify-content: space-between;
+
+            .desc-desc {
+                display: flex;
+                flex-direction: column;
+
+                .desc-title {
+                    font-weight: 800;
+                }
+                .desc-text {
+                    font-size: 15px;
+                    font-weight: 200;
+                    margin-top: 4px;
+                }
+            }
+
+            .desc-icon {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .fa-heart {
+                    text-shadow: 0 0 2px #000;
+                    color: white;
+                    transition: 0.3s;
+                    transition-duration: 0.3s;
+                }
+
+                .fa-heart:hover {
+                    color: #9b57c0;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+    }
+    
+}
+
+.nouveau {
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 90px;
+    height: 33px;
+    background-color: rgb(182, 240, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(60, 162, 101);
+    font-weight: 600;
+    font-size: 15px;
+    z-index: 90;
+}
+
+
+footer {
+    z-index: 20;
+    position: sticky;
+    background-color: rgb(64, 64, 64);
+    padding: 20px;
+    color: white;
+    .footer-title {
+        font-family: 'Shrikhand', cursive;
+        font-size: large;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 15px;
+    }
+
+
+    li {
+        margin-top: 7px;
+        color: white;
+
+        .list-big-text {
+            font-weight: 500;
+        }
+
+        i {
+            width: 20px;
+            height: 20px;
+        }
+        a {
+            color: white;
+        }
+    }
+}
