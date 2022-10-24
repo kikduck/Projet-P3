@@ -527,7 +527,7 @@ header {
 
 .menu-one:hover .menu-one-anim {
   opacity: 1;
-  width: 20%;
+  width: 70px;
 }
 
 .menu-one:hover i {
@@ -553,7 +553,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  width: 0%;
+  width: 0px;
   opacity: 0.8;
   -webkit-transform-origin: right 50%;
           transform-origin: right 50%;
@@ -571,7 +571,7 @@ header {
 }
 
 .menu-one .menu-one-price {
-  width: 10%;
+  width: 30px;
   /*border: solid 3px blue;*/
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,7 +579,6 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-right: 10px;
 }
 
 .menu-one .menu-one-price .menu-one-desc-price {
@@ -620,7 +619,7 @@ header {
   text-overflow: ellipsis;
   width: 90%;
   margin-top: 9px;
-  margin-left: 5%;
+  margin-left: 12px;
   /*border: solid 1px green;*/
 }
 
@@ -634,7 +633,7 @@ header {
   width: 90%;
   margin-top: 9px;
   margin-bottom: 9px;
-  margin-left: 5%;
+  margin-left: 12px;
   /*border: solid 1px green;*/
 }
 
