@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Fonctions apparition des plats */
 .menu-one-entree:nth-child(1) {
   opacity: 0;
   -webkit-animation-delay: 0.1s;
@@ -404,6 +405,15 @@ a {
           box-shadow: 0px 4px 7px #b8b8b8;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .explorer-button:hover, .commander-button:hover {
@@ -521,15 +531,25 @@ header {
 
 #logo {
   margin: auto;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 200px;
   padding-top: 10px;
-  padding-right: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
 }
 
 .fa-arrow-left {
-  padding-left: 20px;
   color: #363636;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 5%;
+  top: 27px;
 }
 
 footer {
@@ -538,12 +558,13 @@ footer {
   position: sticky;
   background-color: #404040;
   padding: 20px;
+  padding-left: 4%;
   color: white;
 }
 
 footer .footer-title {
   font-family: 'Shrikhand', cursive;
-  font-size: large;
+  font-weight: 400;
 }
 
 footer ul {
@@ -586,8 +607,13 @@ footer li a {
   color: #494949;
 }
 
-.localisation span {
+.localisation input {
   margin-left: 10px;
+  color: #494949;
+  border: 0px solid;
+  background-color: #ebebeb;
+  width: 100px;
+  font-weight: bold;
 }
 
 .explorer {
@@ -603,19 +629,22 @@ footer li a {
           flex-direction: column;
   text-align: center;
   text-overflow: clip;
-  padding: 40px;
   background-color: #f7f7f7;
   gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.explorer h2 {
-  font-size: 25px;
+.explorer h1 {
+  font-size: 22px;
   font-weight: bolder;
+  width: 80%;
 }
 
-.explorer span {
+.explorer p {
   color: #494949;
   font-size: 17px;
+  width: 90%;
 }
 
 .explorer-button, .commander-button {
@@ -641,16 +670,32 @@ footer li a {
 }
 
 .fonctionnement h2 {
-  text-align: center;
-  margin-right: 150px;
   padding-top: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .fonctionnement h2 {
+    margin-right: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .fonctionnement h2 {
+    text-align: center;
+  }
 }
 
 .fonctionnement .box-text {
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
           flex-grow: 4;
-  font-weight: bolder;
+  font-size: medium;
 }
 
 .fonctionnement .box-list {
@@ -679,7 +724,7 @@ footer li a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-left: 40px;
+  margin-left: 30px;
   color: grey;
 }
 
@@ -699,8 +744,8 @@ footer li a {
 }
 
 .fonctionnement-box {
-  width: 320px;
-  height: 80px;
+  width: 280px;
+  height: 70px;
   background-color: #f7f7f7;
   border-radius: 35px;
   -webkit-box-shadow: 0px 4px 7px #b8b8b8;
@@ -728,27 +773,67 @@ footer li a {
 }
 
 .restaurants h2 {
-  text-align: center;
-  margin-right: 180px;
   padding-top: 50px;
 }
 
-.restaurants-all {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 767px) {
+  .restaurants h2 {
+    margin-right: 145px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .restaurants h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .restaurants-all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .restaurants-all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 90%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .restaurants-all .restaurants-one {
-  width: 320px;
-  height: 240px;
+  width: 280px;
+  height: 220px;
   border-radius: 30px;
   margin-top: 20px;
   display: -webkit-box;
@@ -762,6 +847,12 @@ footer li a {
   background-color: white;
   -webkit-box-shadow: 0px 4px 7px #b8b8b8;
           box-shadow: 0px 4px 7px #b8b8b8;
+}
+
+@media screen and (min-width: 767px) {
+  .restaurants-all .restaurants-one {
+    margin-left: 30px;
+  }
 }
 
 .restaurants-all .restaurants-one .restaurants-img {
@@ -799,7 +890,8 @@ footer li a {
 }
 
 .restaurants-all .restaurants-one .restaurants-desc .desc-desc .desc-title {
-  font-weight: 800;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .restaurants-all .restaurants-one .restaurants-desc .desc-desc .desc-text {
@@ -838,7 +930,7 @@ footer li a {
 
 .nouveau {
   position: absolute;
-  margin-left: 210px;
+  margin-left: 180px;
   margin-top: 20px;
   border-radius: 5px;
   width: 90px;
@@ -859,6 +951,15 @@ footer li a {
   z-index: 90;
 }
 
+#menu-top img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  margin-top: -250px;
+}
+
 #menu {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -870,34 +971,41 @@ footer li a {
   width: 100%;
 }
 
-#menu-top img {
-  width: 100%;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-}
-
 .menu-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-title {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .menu-title {
+    margin: auto;
+    padding: auto;
+    width: 500px;
+  }
 }
 
 .menu-title .menu-title-text {
   font-family: 'Shrikhand', cursive;
-  font-size: 27px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .menu-title .fa-heart {
-  margin-left: 30px;
+  margin-right: 3%;
   text-shadow: 0 0 2px #000;
   color: #f7f7f7;
   -webkit-transition: 0.3s;
@@ -911,14 +1019,26 @@ footer li a {
   cursor: pointer;
 }
 
-.menu-entree, .menu-plat, .menu-dessert {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 25px;
+@media screen and (max-width: 767px) {
+  .menu-entree, .menu-plat, .menu-dessert {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .menu-entree, .menu-plat, .menu-dessert {
+    width: 500px;
+    margin: auto;
+    margin-top: 25px;
+    padding: auto;
+  }
 }
 
 .menu-entree .menu-entree-title, .menu-entree .menu-plat-title, .menu-entree .menu-dessert-title, .menu-plat .menu-entree-title, .menu-plat .menu-plat-title, .menu-plat .menu-dessert-title, .menu-dessert .menu-entree-title, .menu-dessert .menu-plat-title, .menu-dessert .menu-dessert-title {
   font-size: 16px;
+  font-weight: 400;
 }
 
 .menu-entree .menu-plat-title, .menu-plat .menu-plat-title, .menu-dessert .menu-plat-title {
@@ -936,7 +1056,6 @@ footer li a {
 
 .menu-entree .menu-plat-title-bar, .menu-plat .menu-plat-title-bar, .menu-dessert .menu-plat-title-bar {
   width: 40px;
-  margin-left: 40px;
 }
 
 .menu-one {
@@ -968,6 +1087,7 @@ footer li a {
 }
 
 .menu-one:hover i {
+  /* Animation Rotation */
   -webkit-animation-name: rotation;
           animation-name: rotation;
   -webkit-animation-duration: 0.3s;

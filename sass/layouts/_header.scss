@@ -11,13 +11,18 @@ header {
 
 #logo {
     margin: auto;
-    display: block;
+    display: flex;
     width: 200px;
     padding-top: 10px;
-    padding-right: 30px;
+    justify-content: center;
+    position: absolute;
 }
 
 .fa-arrow-left {
-    padding-left: 20px;
     color: rgb(54, 54, 54);
+    position: absolute;
+    display: flex;
+    left: 5%;
+    top: 27px;
+    
 }

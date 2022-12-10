@@ -11,8 +11,14 @@
     color: rgb(73, 73, 73);
 }
 
-.localisation span {
+.localisation input {
     margin-left: 10px;
+    color: rgb(73, 73, 73);
+    border: 0px solid;
+    background-color: rgb(235, 235, 235);
+    width: 100px;
+    font-weight: bold;
+
 }
 
 .explorer {
@@ -21,18 +27,20 @@
     flex-direction: column;
     text-align: center;
     text-overflow: clip;
-    padding: 40px;
     background-color: $whitegrey;
     gap : 20px;
-
-    h2 {
-        font-size: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h1 {
+        font-size: 22px;
         font-weight: bolder;
+        width: 80%;
     }
 
-    span {
+    p {
         color: rgb(73, 73, 73);
         font-size: 17px;
+        width: 90%;
     }
 }
 .explorer-button {
@@ -54,13 +62,19 @@
 
 .fonctionnement {
     h2 {
-        text-align: center;
-        margin-right: 150px;
         padding-top: 50px;
+        @media screen and (max-width: 767px) {
+            margin-right: 110px;
+            display: flex;
+            justify-content: center;
+        }
+        @media screen and (min-width: 767px) {
+            text-align: center;
+        }
     }
     .box-text {
         flex-grow: 4;
-        font-weight: bolder;
+        font-size: medium;
     }
 
     .box-list {
@@ -80,7 +94,7 @@
 
 .fonctionnement-logo {
     flex-grow: 1;
-    margin-left: 40px;
+    margin-left: 30px;
     color: grey;
 }
 
@@ -93,8 +107,8 @@
 }
 
 .fonctionnement-box {
-    width: 320px;
-    height: 80px;
+    width: 280px;
+    height: 70px;
     background-color: $whitegrey;
     border-radius: 35px;
     @include box-shadow;
@@ -113,22 +127,39 @@
     background-color: $whitegrey;
     margin-top: 40px;
     padding-bottom: 60px;
-
     h2 {
-        text-align: center;
-        margin-right: 180px;
         padding-top: 50px;
+        @media screen and (max-width: 767px) {
+            margin-right: 145px;
+            display: flex;
+            justify-content: center;
+        }
+        @media screen and (min-width: 767px) {
+            text-align: center;
+        }
     }
 }
 
 .restaurants-all {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (min-width: 767px) {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .restaurants-one {
-        width: 320px;
-        height: 240px;
+        width: 280px;
+        height: 220px;
         border-radius: 30px;
         margin-top: 20px;
         display: flex;
@@ -136,6 +167,9 @@
         overflow: hidden;
         background-color: white;
         @include box-shadow;
+        @media screen and (min-width: 767px) {
+            margin-left: 30px;
+        }
 
         .restaurants-img {
             width: 100%;
@@ -160,7 +194,8 @@
                 flex-direction: column;
 
                 .desc-title {
-                    font-weight: 800;
+                    font-weight: 600;
+                    font-size: 16px;
                 }
                 .desc-text {
                     font-size: 15px;
@@ -196,7 +231,7 @@
 }
 .nouveau {
     position: absolute;
-    margin-left: 210px;
+    margin-left: 180px;
     margin-top: 20px;
     border-radius: 5px;
     width: 90px;

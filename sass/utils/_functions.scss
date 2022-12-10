@@ -1,3 +1,5 @@
+/* Fonctions apparition des plats */
+
 @for $i from 1 to 9 {
     .menu-one-entree:nth-child(#{$i}) { 
         opacity: 0;
@@ -43,6 +45,8 @@
     }
   }
 
+
+  
 @keyframes rotation {
  0% {
     rotate: 0deg;
